@@ -2,6 +2,7 @@ package study.core;
 
 import study.core.discount.DiscountPolicy;
 import study.core.discount.FixDiscountPolicy;
+import study.core.discount.RateDiscountPolicy;
 import study.core.member.MemberRepository;
 import study.core.member.MemberService;
 import study.core.member.MemberServiceImpl;
@@ -24,7 +25,8 @@ public class AppConfig {
     }
 
     public DiscountPolicy discountPolicy() {
-        return new FixDiscountPolicy();
+        //return new FixDiscountPolicy();
+        return new RateDiscountPolicy();
     }
 
 }
